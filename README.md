@@ -9,7 +9,7 @@ Install firmware
 
 	sudo apt install xvfb
 	sudo apt-get install python3-pip glslang-tools meson ninja-build
-	sudo apt install bc python-make python3-pip flex bison build-essential libncurses5-dev
+	sudo apt install bc python3-pip flex bison build-essential libncurses5-dev
 
 	pip3 install setuptools mako
 	sudo apt build-dep mesa libdrm
