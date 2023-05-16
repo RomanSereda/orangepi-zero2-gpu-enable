@@ -15,10 +15,12 @@ Install firmware
 
 	wget https://archive.mesa3d.org/mesa-23.1.0.tar.xz
 	tar -xf mesa-23.1.0.tar.xz
-	cd mesa-23.1.0
-	meson setup build-mesa/ -Dgallium-drivers=panfrost -Dtools=drm-shim -Dvulkan-drivers=panfrost -Dllvm=disabled
-	ninja -C build-mesa/
-	sudo ninja -C build-mesa/ install
+	mv mesa-23.1.0 mesa-source
+	cd mesa-source
+	export MESA_INSTALLDIR=/home/orangepi/mesa-install/
+	meson setup build-mesa/ -Dprefix="~/mesa-install" -Dgallium-drivers=panfrost -Dtools=drm-shim -Dvulkan-drivers=panfrost -Dllvm=disabled
+	ninja -C build/
+	sudo ninja -C build/ install
 
 Add remote desktop
 ------------
