@@ -8,7 +8,6 @@ Install firmware
 	sudo apt upgrade
 
 	sudo apt install xvfb
-	sudo apt-get install 
 	sudo apt-get install python3-pip glslang-tools meson ninja-build
 	sudo apt install bc python-make python3-pip flex bison build-essential libncurses5-dev
 
@@ -34,7 +33,6 @@ Add remote desktop
 	vncserver -kill :1
 	touch /home/orangepi/.Xresources
 	sudo apt-get install lxde-core
-
 
 	nano ~/.vnc/xstartup
 
