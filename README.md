@@ -4,7 +4,9 @@ Install firmware
 ###### [download Orangepizero2_3.0.6_ubuntu_jammy_server_linux5.16.17.7z](https://drive.google.com/file/d/1bOtd9FwgLO2Cj4SauVdK410bDGqvtwhP/view?usp=share_link "download Orangepizero2_3.0.6_ubuntu_jammy_server_linux5.16.17.7z")
 
 sudo nano /etc/apt/sources.list
+
 sudo apt update
+
 sudo apt upgrade
 
 sudo apt install xvfb
