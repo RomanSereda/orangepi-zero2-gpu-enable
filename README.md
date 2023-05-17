@@ -18,8 +18,8 @@ Install firmware
 	mv mesa-23.1.0 mesa-source
 	cd mesa-source
 	mkdir ~/mesa-install
-	export MESA_INSTALLDIR=/home/orangepi/mesa-install/
-	meson setup build-mesa/ -Dprefix="~/mesa-install" -Dgallium-drivers=panfrost -Dtools=drm-shim -Dvulkan-drivers=panfrost -Dllvm=disabled
+	export MESA_INSTALLDIR=/usr
+	meson setup build/ -Dprefix="~/usr" -Dgallium-drivers=panfrost -Dtools=drm-shim -Dvulkan-drivers=panfrost -Dllvm=disabled
 	ninja -C build/
 	sudo ninja -C build/ install
 
