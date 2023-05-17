@@ -44,7 +44,7 @@ Add remote desktop
 	/etc/X11/Xsession
 	startlxde &
 	
-For Qt
+For Qt cross-compilation
 ------------
 	sudo apt-get build-dep qt5-qmake
 	sudo apt-get build-dep libqt5gui5
