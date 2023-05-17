@@ -43,5 +43,13 @@ Add remote desktop
 	export XKL_XMODMAP_DISABLE=1
 	/etc/X11/Xsession
 	startlxde &
+	
+For Qt
+------------
+	sudo apt-get build-dep qt5-qmake
+	sudo apt-get build-dep libqt5gui5
+	sudo apt-get build-dep libqt5webengine-data
+	sudo apt-get build-dep libqt5webkit5
+	sudo apt-get install libudev-dev libinput-dev libts-dev libxcb-xinerama0-dev libxcb-xinerama0 gdbserver
 
 
