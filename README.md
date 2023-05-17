@@ -44,12 +44,14 @@ Add remote desktop
 	/etc/X11/Xsession
 	startlxde &
 	
-For Qt cross-compilation
+Boost
 ------------
-	sudo apt-get build-dep qt5-qmake
-	sudo apt-get build-dep libqt5gui5
-	sudo apt-get build-dep libqt5webengine-data
-	sudo apt-get build-dep libqt5webkit5
-	sudo apt-get install libudev-dev libinput-dev libts-dev libxcb-xinerama0-dev libxcb-xinerama0 gdbserver
+	size="4G" && file_swap=/swapfile_$size.img && sudo touch $file_swap && sudo fallocate -l $size /$file_swap && sudo mkswap /$file_swap && sudo swapon -p 20 /$file_swap
+	wget https://boostorg.jfrog.io/artifactory/main/release/1.82.0/source/boost_1_82_0.tar.gz
+	tar xzvf boost_1_82_0.tar.gz
+	cd boost_1_82_0/
+	./bootstrap.sh --prefix=/usr/
+	./b2
+	sudo ./b2 install
 
 
