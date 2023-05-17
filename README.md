@@ -26,9 +26,9 @@ Install firmware
 Add remote desktop
 ------------
 	sudo apt-get install mesa-utils
-	apt-get install  xfonts-base
+	sudo apt-get install  xfonts-base
 
-	apt-get install x11-xserver-utils
+	sudo apt-get install x11-xserver-utils
 	sudo apt-get install tightvncserver
 	vncserver
 	vncserver -kill :1
