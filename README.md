@@ -1,14 +1,22 @@
-Install firmware
+Install image
 ------------
-###### [download Orangepizero2_3.0.6_ubuntu_jammy_server_linux5.16.17.7z](https://drive.google.com/file/d/1bOtd9FwgLO2Cj4SauVdK410bDGqvtwhP/view?usp=share_link "download Orangepizero2_3.0.6_ubuntu_jammy_server_linux5.16.17.7z")
+###### [Download and  install the image on the sd card Orangepizero2_3.0.6_ubuntu_jammy_desktop_xfce_linux5.16.17.img](https://drive.google.com/file/d/1qTtGsdRtx4EtQQIXGP-6RgXL6NTIjvmw/view?usp=share_link "Download and  install the image on the sd card Orangepizero2_3.0.6_ubuntu_jammy_desktop_xfce_linux5.16.17.img")
 
+	#insert sd-card, turn on, wait 5 min, off-on power supply
+	#connect usb-uart-tll. set PyTTy serial: COM8 (8 for me), speed 115200
+	#login: orangepi  password: orangepi
+	sudo orangepi-config
+	#network->wifi, set wifi password.
+	#set PyTTy ssh: 192.168.x.x, port 22.
+
+Compile and install mesa
+------------
 	sudo nano /etc/apt/sources.list
+	# uncomment deb-src
 	sudo apt update
 	sudo apt upgrade
 
-	sudo apt install xvfb
-	sudo apt install python3-pip glslang-tools meson ninja-build
-	sudo apt install bc python3-pip flex bison build-essential libncurses5-dev
+	sudo apt install glslang-tools meson ninja-build cmake bc python3-pip flex bison build-essential libncurses5-dev mesa-utils xfonts-base libjpeg-dev 
 
 	pip3 install setuptools mako
 	sudo apt build-dep mesa libdrm
@@ -19,31 +27,10 @@ Install firmware
 	cd mesa-source
 	mkdir ~/mesa-install
 	export MESA_INSTALLDIR=/usr
-	meson setup build/ -Dprefix="~/mesa-install" -Dgallium-drivers=panfrost -Dtools=drm-shim -Dvulkan-drivers=panfrost -Dllvm=disabled
+	meson setup build/ -Dprefix="usr" -Dgallium-drivers=panfrost -Dtools=drm-shim -Dvulkan-drivers=panfrost -Dllvm=disabled
 	ninja -C build/
 	sudo ninja -C build/ install
 
-Add remote desktop
-------------
-	sudo apt-get install mesa-utils
-	sudo apt-get install  xfonts-base
-
-	sudo apt-get install x11-xserver-utils
-	sudo apt-get install tightvncserver
-	vncserver
-	vncserver -kill :1
-	touch /home/orangepi/.Xresources
-	sudo apt-get install lxde-core
-
-	nano ~/.vnc/xstartup
-
-	#!/bin/sh
-	xrdb "$HOME/.Xresources"
-	xsetroot -solid grey
-	export XKL_XMODMAP_DISABLE=1
-	/etc/X11/Xsession
-	startlxde &
-	
 Boost
 ------------
 	size="4G" && file_swap=/swapfile_$size.img && sudo touch $file_swap && sudo fallocate -l $size /$file_swap && sudo mkswap /$file_swap && sudo swapon -p 20 /$file_swap
@@ -53,5 +40,3 @@ Boost
 	./bootstrap.sh --prefix=/usr/
 	./b2
 	sudo ./b2 install
-
-
