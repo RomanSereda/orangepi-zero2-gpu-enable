@@ -10,8 +10,8 @@ Install image
 
 	# network->wifi, set wifi password.
 	# set pytty ssh: 192.168.x.x, port 22.
-
-Compile and install mesa
+	
+Update
 ------------
 	sudo nano /etc/apt/sources.list
 	# uncomment deb-src
@@ -21,6 +21,11 @@ Compile and install mesa
 
 	sudo apt install glslang-tools meson ninja-build cmake bc python3-pip flex bison build-essential libncurses5-dev mesa-utils xfonts-base libjpeg-dev 
 
+	pip3 install setuptools mako
+	sudo apt build-dep mesa libdrm
+
+Compile and install mesa
+------------
 	pip3 install setuptools mako
 	sudo apt build-dep mesa libdrm
 
