@@ -56,7 +56,6 @@ Install glmark2
 Remote desktop
 ------------
 	sudo apt-get install xrdp xorgxrdp
-	sudo xrdp
 
 	#login: root  password: orangepi - for windows rdp
 
