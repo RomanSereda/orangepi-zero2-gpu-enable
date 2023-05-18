@@ -19,7 +19,8 @@ Update
 	sudo apt update
 	sudo apt upgrade
 
-	sudo apt install glslang-tools meson ninja-build cmake bc python3-pip flex bison build-essential libncurses5-dev mesa-utils xfonts-base libjpeg-dev libpng-dev mesa-opencl-icd clinfo ocl-icd-opencl-dev
+	sudo apt install glslang-tools mesa-utils clinfo flex bison cmake meson ninja-build bc python3-pip build-essential 
+	sudo apt install libncurses5-dev xfonts-base libjpeg-dev libpng-dev mesa-opencl-icd ocl-icd-opencl-dev libunwind-dev
 
 	pip3 install setuptools mako
 	sudo apt build-dep mesa libdrm
@@ -70,7 +71,6 @@ Compile and install mesa
 	tar -xf mesa-23.1.0.tar.xz
 	mv mesa-23.1.0 mesa-source
 	cd mesa-source
-	mkdir ~/mesa-install
 	export MESA_INSTALLDIR=/usr
 	meson setup build/ -Dprefix=/usr -Dgallium-drivers=panfrost -Dtools=drm-shim -Dvulkan-drivers=panfrost -Dllvm=disabled
 	ninja -C build/
