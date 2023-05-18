@@ -52,7 +52,7 @@ Install glmark2
 	sudo ninja -C build install
 
 	#run benchmark
-	glmark2-es2
+	glmark2-es2 --off-screen
 
 Remote desktop
 ------------
