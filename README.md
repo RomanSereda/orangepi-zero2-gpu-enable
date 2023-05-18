@@ -24,6 +24,24 @@ Update
 	pip3 install setuptools mako
 	sudo apt build-dep mesa libdrm
 
+Clear snap
+------------
+	sudo snap remove --purge cups
+	sudo snap remove --purge chromium
+	sudo snap remove --purge gnome-3-38-2004
+	sudo snap remove --purge gtk-common-themes
+	sudo snap remove --purge snapd-desktop-integration
+	sudo snap remove --purge bare
+	sudo snap remove --purge core20
+	sudo snap remove --purge snapd
+	sudo systemctl disable snapd.service
+	sudo systemctl disable snapd.socket
+	sudo apt purge snap
+	rm -rf ~/snap
+	sudo rm -rf /snap
+	sudo rm -rf /var/snap
+	sudo rm -rf /var/lib/snapd
+
 Install glmark2
 ------------
 	git clone https://github.com/glmark2/glmark2.git
