@@ -19,7 +19,7 @@ Update
 	sudo apt update
 	sudo apt upgrade
 
-	sudo apt install glslang-tools meson ninja-build cmake bc python3-pip flex bison build-essential libncurses5-dev mesa-utils xfonts-base libjpeg-dev libpng-dev
+	sudo apt install glslang-tools meson ninja-build cmake bc python3-pip flex bison build-essential libncurses5-dev mesa-utils xfonts-base libjpeg-dev libpng-dev mesa-opencl-icd clinfo ocl-icd-opencl-dev
 
 	pip3 install setuptools mako
 	sudo apt build-dep mesa libdrm
