@@ -19,10 +19,26 @@ Update
 	sudo apt update
 	sudo apt upgrade
 
-	sudo apt install glslang-tools meson ninja-build cmake bc python3-pip flex bison build-essential libncurses5-dev mesa-utils xfonts-base libjpeg-dev 
+	sudo apt install glslang-tools meson ninja-build cmake bc python3-pip flex bison build-essential libncurses5-dev mesa-utils xfonts-base libjpeg-dev libpng-dev
 
 	pip3 install setuptools mako
 	sudo apt build-dep mesa libdrm
+
+Install glmark2
+------------
+	git clone https://github.com/glmark2/glmark2.git
+	cd glmark2
+	meson setup build -Dflavors=x11-glesv2 
+	ninja -C build
+	sudo ninja -C build install
+
+	#run benchmark
+	glmark2-es2
+
+Remote desktop
+------------
+	sudo apt-get install xrdp xorgxrdp
+	#login: root  password: orangepi - for windows rdp
 
 Compile and install mesa
 ------------
