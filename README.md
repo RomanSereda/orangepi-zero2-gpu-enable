@@ -53,6 +53,7 @@ Install glmark2
 
 	#run benchmark
 	glmark2-es2 --off-screen
+	#extern terminal: sudo env DISPLAY=:10.0 glmark2-es2 --off-screen
 
 Remote desktop
 ------------
