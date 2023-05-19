@@ -37,7 +37,7 @@ Install glmark2
 	glmark2-es2 --off-screen
 	#extern terminal: sudo env DISPLAY=:10.0 glmark2-es2 --off-screen
 	
-![Untitled](https://github.com/RomanSereda/orangepi-zero2-gpu-enable/assets/31166559/14e2a3fa-1fe4-4be8-bb16-f1531a264530)
+![Untitled](https://github.com/RomanSereda/orangepi-zero2-gpu-enable/assets/31166559/fbee0507-57d9-4e1b-980e-4013684db004)
 
 
 Remote desktop
@@ -72,4 +72,5 @@ Boost
 	./b2
 	sudo ./b2 install
 
+![photo_2023-05-20_01-42-14](https://github.com/RomanSereda/orangepi-zero2-gpu-enable/assets/31166559/fcc893ff-2539-4e56-80b0-5d0d502bf4ae)
 
