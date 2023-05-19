@@ -22,11 +22,11 @@ Update
 	sudo apt install glslang-tools mesa-utils clinfo flex bison cmake meson ninja-build bc python3-pip build-essential 
 	sudo apt install libncurses5-dev xfonts-base libjpeg-dev libpng-dev mesa-opencl-icd ocl-icd-opencl-dev libunwind-dev
 
+Install glmark2
+------------
 	pip3 install setuptools mako
 	sudo apt build-dep mesa libdrm
 
-Install glmark2
-------------
 	git clone https://github.com/glmark2/glmark2.git
 	cd glmark2
 	meson setup build -Dflavors=x11-glesv2 
