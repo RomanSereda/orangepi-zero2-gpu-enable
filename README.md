@@ -1,5 +1,3 @@
-<img src="https://github.com/RomanSereda/orangepi-zero2-gpu-enable/blob/master/Untitled.png" width="300">
-
 Install image
 ------------
 #### [Download and  install the image on the sd card Orangepizero2_3.0.6_ubuntu_jammy_desktop_xfce_linux5.16.17.img](https://drive.google.com/file/d/1qTtGsdRtx4EtQQIXGP-6RgXL6NTIjvmw/view?usp=share_link "Download and  install the image on the sd card Orangepizero2_3.0.6_ubuntu_jammy_desktop_xfce_linux5.16.17.img")
@@ -56,6 +54,9 @@ Install glmark2
 	#run benchmark
 	glmark2-es2 --off-screen
 	#extern terminal: sudo env DISPLAY=:10.0 glmark2-es2 --off-screen
+	
+![Untitled](https://github.com/RomanSereda/orangepi-zero2-gpu-enable/assets/31166559/14e2a3fa-1fe4-4be8-bb16-f1531a264530)
+
 
 Remote desktop
 ------------
