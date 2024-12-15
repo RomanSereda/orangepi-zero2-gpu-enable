@@ -62,15 +62,5 @@ Compile and install mesa
 	ninja -C build/
 	sudo ninja -C build/ install
 
-Boost
-------------
-	size="4G" && file_swap=/swapfile_$size.img && sudo touch $file_swap && sudo fallocate -l $size /$file_swap && sudo mkswap /$file_swap && sudo swapon -p 20 /$file_swap
-	wget https://boostorg.jfrog.io/artifactory/main/release/1.82.0/source/boost_1_82_0.tar.gz
-	tar xzvf boost_1_82_0.tar.gz
-	cd boost_1_82_0/
-	./bootstrap.sh --prefix=/usr/
-	./b2
-	sudo ./b2 install
 
-![photo_2023-05-20_01-42-14](https://github.com/RomanSereda/orangepi-zero2-gpu-enable/assets/31166559/fcc893ff-2539-4e56-80b0-5d0d502bf4ae)
 
